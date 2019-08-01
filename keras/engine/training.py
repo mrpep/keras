@@ -1641,6 +1641,9 @@ class Model(Network):
                             steps_per_epoch=10000, epochs=10)
         ```
         """
+
+        self.validation_data = validation_data
+
         return training_generator.fit_generator(
             self, generator,
             steps_per_epoch=steps_per_epoch,
